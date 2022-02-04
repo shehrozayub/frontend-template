@@ -1,0 +1,30 @@
+.login_page {
+  width: 100vw;
+  height: 100vh;
+  align-items: center;
+  justify-content: space-around;
+  background-color: var(--primary);
+}
+
+.login_form {
+  padding: 24px;
+  background-color: white;
+  border-radius: var(--borderradius-site);
+  width: 30%;
+  box-shadow: var(--boxshadow-soft);
+
+  
+}
+
+@media screen and (max-width: 786px)   
+{
+  .login_page {
+    justify-content: center;
+  }
+  .login_form{
+    width: 80%;
+    height: 80%;
+  }
+  
+}
+

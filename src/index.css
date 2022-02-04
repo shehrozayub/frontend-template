@@ -1,0 +1,34 @@
+@import "/src/styles/constants.css"; /* Define all constants here, dont use magic numbers*/
+@import "/src/styles/common.css"; /* Define all common css here, dont use magic numbers*/
+@import "/src/styles/login.css"; /* Login css*/
+@import "/src/styles/navbar.css"; /* Navbar css*/
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.main {
+  width: 100vw;
+  height: 100vh;
+  /* background-color: red; */
+  margin: 0;
+  padding: 0;
+}
+
+.Toastify__toast-body {
+  white-space: pre-line;
+}
+
+.loader {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
