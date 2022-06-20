@@ -36,10 +36,8 @@ button {
   height: 100%;
 }
 
-@media screen and (max-width:786px) {
-.hide_on_mobile{
-  display: none;
-
-}
-  
+@media screen and (max-width: 786px) {
+  .hide_on_mobile {
+    display: none;
+  }
 }

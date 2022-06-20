@@ -34,7 +34,11 @@ function App() {
   };
 
   const TherapistRoute = ({ children }) => {
-    return user && user.role === "CLINIC_ADMIN" ? children : <Navigate to="/" />;
+    return user && user.role === "CLINIC_ADMIN" ? (
+      children
+    ) : (
+      <Navigate to="/" />
+    );
   };
 
   const PublicRoute = ({ children }) => {
@@ -75,7 +79,6 @@ function App() {
           }
         />
 
-
         <Route
           path="/dashboard"
           element={
@@ -100,7 +103,6 @@ function App() {
             </PatientRoute>
           }
         />
-
 
         <Route path="*" element={<NotFound />} />
       </Routes>

@@ -44,22 +44,14 @@ export const appSlice = createSlice({
       toast.error(getErrorDetailsforNotif(action.payload));
     },
     [forgotPassword.fulfilled]: () => {
-
       toast("Please check your email for reset link");
-
-
     },
     [resetPassword.rejected]: (state, action) => {
       toast.error(getErrorDetailsforNotif(action.payload));
-
     },
     [resetPassword.fulfilled]: () => {
-
       toast("Password reset succesfully");
-
-
     },
-
   },
 });
 

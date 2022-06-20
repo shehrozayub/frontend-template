@@ -13,7 +13,6 @@ export default function Navbar() {
   return (
     <div className="nav_main">
       <div className="nav_content">
-
         <button onClick={handleLogout}>
           {" "}
           <AiOutlineLogout />{" "}

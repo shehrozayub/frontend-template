@@ -12,19 +12,14 @@
   border-radius: var(--borderradius-site);
   width: 30%;
   box-shadow: var(--boxshadow-soft);
-
-  
 }
 
-@media screen and (max-width: 786px)   
-{
+@media screen and (max-width: 786px) {
   .login_page {
     justify-content: center;
   }
-  .login_form{
+  .login_form {
     width: 80%;
     height: 80%;
   }
-  
 }
-

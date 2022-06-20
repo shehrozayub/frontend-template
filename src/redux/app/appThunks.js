@@ -37,7 +37,6 @@ export const forgotPassword = createAsyncThunk(
   }
 );
 
-
 export const resetPassword = createAsyncThunk(
   "app/forgotPassword",
   async (payload, { rejectWithValue }) => {
@@ -47,5 +46,3 @@ export const resetPassword = createAsyncThunk(
     else return rejectWithValue(await response.json());
   }
 );
-
-
