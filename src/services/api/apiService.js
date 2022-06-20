@@ -101,3 +101,63 @@ export const apiGetAuthenticated = async (url) => {
   });
   return await response;
 };
+
+export const apiDeleteAuthenticated = async (url) => {
+  const result = await accessRefreshCycle();
+  if (result === false) {
+    simulateLogout();
+  }
+
+  const response = await fetch(BASE_URL + url, {
+    method: "DELETE", // *GET, POST, PUT, DELETE, etc.
+    mode: "cors", // no-cors, *cors, same-origin
+    cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
+    credentials: "same-origin", // include, *same-origin, omit
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `JWT ${localStorage.getItem("accessToken")}`,
+    },
+    redirect: "follow", // manual, *follow, error
+    referrerPolicy: "no-referrer", // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+  });
+  return await response;
+};
+
+export const apiPatchAuthenticated = async (url, data) => {
+  if (!accessRefreshCycle()) {
+    simulateLogout();
+  }
+
+  const response = await fetch(BASE_URL + url, {
+    method: "PATCH", // *GET, POST, PUT, DELETE, etc.
+    mode: "cors", // no-cors, *cors, same-origin
+    cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
+    credentials: "same-origin", // include, *same-origin, omit
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `JWT ${localStorage.getItem("accessToken")}`,
+    },
+    redirect: "follow", // manual, *follow, error
+    referrerPolicy: "no-referrer", // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+    body: JSON.stringify(data), // body data type must match "Content-Type" header
+  });
+
+  return await response;
+};
+
+export const apiPatchFileAuthenticated = async (url, data) => {
+  if (!accessRefreshCycle()) {
+    simulateLogout();
+  }
+
+  const response = await fetch(BASE_URL + url, {
+    method: "PATCH", // *GET, POST, PUT, DELETE, etc.
+    mode: "cors", // no-cors, *cors, same-origin
+    headers: {
+      Authorization: `JWT ${localStorage.getItem("accessToken")}`,
+    },
+    body: data, // body data type must match "Content-Type" header
+  });
+
+  return await response;
+};
