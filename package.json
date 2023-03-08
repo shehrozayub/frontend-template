@@ -44,7 +44,7 @@
   "devDependencies": {
     "eslint": "^8.8.0",
     "eslint-plugin-react": "^7.28.0",
-    "mini-css-extract-plugin": "2.7.2"
+    "mini-css-extract-plugin": "2.7.3"
   },
   "resolutions": {
     "//": "See https://github.com/facebook/create-react-app/issues/11773",
