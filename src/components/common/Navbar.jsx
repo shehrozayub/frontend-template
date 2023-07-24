@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import { logOutUser } from "../../redux/app/appSlice";
 import { AiOutlineLogout } from "react-icons/ai";
 
-export default function Navbar() {
+export default function NavbarComponent() {
   const dispatch = useDispatch();
 
   const handleLogout = () => {
