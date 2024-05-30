@@ -1,3 +1,5 @@
+import { AuthThunkNamePrefix } from "./constants/constantsService";
+
 export const getErrorDetailsforNotif = (response) => {
   if (response.detail) {
     return response.detail;
@@ -13,3 +15,11 @@ export const getErrorDetailsforNotif = (response) => {
     return stringtoreturn;
   }
 };
+
+export const generateThunkName = (name: string) => {
+  return AuthThunkNamePrefix+name;
+}
+
+export const isSuccessResponse = (response) => {
+  return response.status >= 200 && response.status < 300;
+}
