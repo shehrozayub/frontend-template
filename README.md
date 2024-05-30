@@ -2,6 +2,14 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## CHANGES 2024
+- Updated libraries
+- Converted to tsx
+    - Added models for apis, entities
+- Included abstraction in services
+- Added a constants service
+- Snyk integration
+
 ## Available Scripts
 
 In the project directory, you can run:
