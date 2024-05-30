@@ -44,6 +44,7 @@
   "devDependencies": {
     "eslint": "^9.3.0",
     "eslint-plugin-react": "^7.28.0",
+    "typescript": "^5",
     "mini-css-extract-plugin": "2.9.0"
   },
   "resolutions": {

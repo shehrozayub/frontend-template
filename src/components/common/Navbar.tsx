@@ -1,10 +1,11 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import { logOutUser } from "../../redux/app/appSlice";
+import { logOutUser } from "../../redux/auth/authSlice";
 import { AiOutlineLogout } from "react-icons/ai";
+import { AppDispatch } from "../../redux/store";
 
 export default function NavbarComponent() {
-  const dispatch = useDispatch();
+  const dispatch:AppDispatch = useDispatch();
 
   const handleLogout = () => {
     dispatch(logOutUser());

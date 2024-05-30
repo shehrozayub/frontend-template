@@ -1,10 +1,12 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import { signinUser } from "../../redux/app/appThunks";
+import { signinUser } from "../../redux/auth/authThunks";
 import { useNavigate } from "react-router-dom";
+import { AppDispatch } from "../../redux/store";
+import { TextUIConstants } from "../../services/constants/constantsService";
 
 export default function Login() {
-  const dispatch = useDispatch();
+  const dispatch:AppDispatch = useDispatch();
   const navigate = useNavigate();
 
   const handleForgotPassword = (e) => {
@@ -25,12 +27,12 @@ export default function Login() {
   return (
     <div className="box-row login_page">
       <div className="box-column login_form">
-        <h2>Login</h2>
+        <h2>{TextUIConstants.PageTitles.Login}</h2>
         <form method="POST" onSubmit={handleSignUp} className="box-column">
           <input type="text" name="username" placeholder="username or email" />
           <input type="password" name="password" placeholder="password" />
-          <button type="submit">Sign In </button>
-          <button onClick={handleForgotPassword}>Forgot Password?</button>
+          <button type="submit">{TextUIConstants.ButtonTexts.Submit}</button>
+          <button onClick={handleForgotPassword}>{TextUIConstants.Prompts.ForgotPassword}</button>
         </form>
       </div>
     </div>
