@@ -27,7 +27,7 @@ export default function ForgotPassword() {
           className="box-column"
         >
           <input type="text" name="email" placeholder="email" />
-          <button type="submit">{TextUIConstants.ButtonTexts.ForgotPassword}</button>
+          <button type="submit">{TextUIConstants.ButtonTexts.Submit}</button>
         </form>
       </div>
     </div>
