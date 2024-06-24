@@ -4,8 +4,9 @@ import { APIResponse } from "../../models/generic";
 import { ForgotPasswordInput, ResetPasswordInput, SignInInput, SignInResponse, User } from "../../models/auth";
 import { APIPaths } from "../../services/constants/constantsService";
 import { generateThunkName, isSuccessResponse } from "../../services/globalFunctions";
+import APIFactory from "../../services/api/APIFactory";
 
-const apiService = new AxiosAPIService();
+const apiService = APIFactory.getAPIService();;
 
 const AuthAPIPaths = APIPaths.AuthAPIPaths;
 
